@@ -1,29 +1,21 @@
-// src/App.js
-import React from 'react';
-import Editor from './components/editor.js';
-import Preview from './components/preview.js';
+import React, { useState } from 'react';
+import Editor from './components/editor';
+import Preview from './components/preview'; 
+import './App.css';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      markdown: ''
-    };
-    this.handleChange = this.handleChange.bind(this);
+const App = () => {
+  const [markdown, setMarkdown] = useState("# Welcome to my React Markdown Previewer!");
+
+  const handleChange = (e) => {
+    setMarkdown(e.target.value);
   }
 
-  handleChange(e) {
-    this.setState({ markdown: e.target.value });
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <Editor markdown={this.state.markdown} onChange={this.handleChange} />
-        <Preview markdown={this.state.markdown} />
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <Editor markdown={markdown} onChange={handleChange} />
+      <Preview markdown={markdown} />
+    </div>
+  );
 }
 
 export default App;

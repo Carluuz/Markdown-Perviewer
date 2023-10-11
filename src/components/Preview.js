@@ -1,18 +1,15 @@
-// src/components/Preview.js
 import React from 'react';
-import * as marked from 'marked';
+import marked from 'marked';
 
-class Preview extends React.Component {
-  getMarkdownText() {
-    var rawMarkup = marked(this.props.markdown, {sanitize: true});
+const Preview = ({ markdown }) => {
+  const getMarkdownText = () => {
+    let rawMarkup = marked(markdown, { sanitize: true });
     return { __html: rawMarkup };
   }
 
-  render() {
-    return (
-      <div id="preview" dangerouslySetInnerHTML={this.getMarkdownText()} />
-    );
-  }
+  return (
+    <div id="preview" dangerouslySetInnerHTML={getMarkdownText()} />
+  );
 }
 
 export default Preview;

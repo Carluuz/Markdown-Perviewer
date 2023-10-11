@@ -14,6 +14,8 @@ const App = () => {
     <div className="App">
       <Editor markdown={markdown} onChange={handleChange} />
       <Preview markdown={markdown} />
+
+      <script scr="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </div>
   );
 }

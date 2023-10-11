@@ -5,7 +5,7 @@ import './App.css';
 
 
 const App = () => {
-  const [markdown, setMarkdown] = useState('hi');
+  const [markdown, setMarkdown] = useState('hello world!');
 
   const handleChange = (e) => {
     setMarkdown(e.target.value);

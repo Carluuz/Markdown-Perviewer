@@ -1,0 +1,12 @@
+
+const defaultMarkdown = "
+<h1>Dom Carlos</h1>
+<h2>The GOAT</h2>
+[links](https://www.freecodecamp.org)
+some code, \`<div></div>\`
+You can also make text **bold**... whoa!
+![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
+";
+
+
+export default defaultMarkdown;
